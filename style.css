@@ -1,11 +1,13 @@
+/* Base Styles */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f3f4f6;
+  background: linear-gradient(to bottom right, #e0f2ff, #ffffff); /* Soft blue-white gradient */
   color: #222;
 }
 
+/* Header Section */
 header {
   background-color: #004aad;
   color: white;
@@ -18,11 +20,13 @@ header {
   font-size: 1.2em;
 }
 
+/* Navigation Bar */
 nav {
   display: flex;
   justify-content: center;
   background-color: #e5e7eb;
   padding: 10px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -30,8 +34,14 @@ nav a {
   text-decoration: none;
   color: #004aad;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+nav a:hover {
+  color: #002d6d;
+}
+
+/* Section Layout */
 section {
   max-width: 900px;
   margin: 40px auto;
@@ -43,18 +53,26 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Card Style (for Education, Projects, etc.) */
 .card {
   background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 15px 0;
   border-radius: 10px;
 }
 
+/* Links */
 a {
   color: #004aad;
+  transition: color 0.3s ease;
 }
 
+a:hover {
+  color: #002d6d;
+}
+
+/* Footer */
 footer {
   background: #004aad;
   color: white;
@@ -63,7 +81,23 @@ footer {
   margin-top: 30px;
 }
 
-/* Responsive */
+/* Button-style Links (Resume, Projects, etc.) */
+.btn {
+  display: inline-block;
+  background-color: #004aad;
+  color: white;
+  padding: 10px 20px;
+  margin: 15px 10px 0 0;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00357a;
+}
+
+/* Responsive Design */
 @media (max-width: 600px) {
   header h1 {
     font-size: 1.8em;
@@ -75,5 +109,11 @@ footer {
 
   nav a {
     margin: 5px 0;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
   }
 }
